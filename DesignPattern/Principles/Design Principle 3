@@ -1,0 +1,1 @@
+To change a model class's behaviour at runtime, just call the model class's setter method for that behaviour

@@ -1,0 +1,4 @@
+Take what varies and encapsulate it so it wont affect the rest of your code
+->  Identify the aspects of application that vary and separate them from what stays the same(Think in the direction of
+    superclass whose behaviours can change with different subclasses )
+
