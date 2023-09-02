@@ -1,0 +1,3 @@
+PUBLISHERS + SUBSCRIBERS = OBSERVER PATTERN
+
+Some are observer objects which observers Subject. Whenever subject data changes they get notified about the update

@@ -1,0 +1,2 @@
+Observer pattern defines 1 to many relationship
+One object changes all of its dependents are notified
