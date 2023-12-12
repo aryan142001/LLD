@@ -1,0 +1,3 @@
+Power of loose coupling design b/w objects that interact:-
+
+It allows us to build flexible OO systems that can handle change because they minimize the interdependency b/w objects
