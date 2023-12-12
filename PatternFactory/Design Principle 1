@@ -1,0 +1,7 @@
+We code to interfaces, when we dont know which implementation can be pursued. Only at runtime we will get to know
+about it. At that time we encapsulate what varies.
+
+Usually it is done by creating factory classes. It is either done statically (using static factory method) or the other
+generic way. But the problem is you cant subclass static methods
+
+Depend upon abstractions. Do not depend upon concrete classes.

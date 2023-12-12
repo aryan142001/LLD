@@ -1,0 +1,6 @@
+Dependency Inversion Principle:-
+Depend upon abstractions. Do not depend upon concrete classes.
+
+*High level* component is a class with behaviour defined in terms of other, *low level* components.
+For eg, Pizza store is a high level component because its behaviour is defined in terms of Pizza - It creates
+all the different pizza objects , prepares, bakes, cuts and boxes them, while the pizzas it uses are low level components

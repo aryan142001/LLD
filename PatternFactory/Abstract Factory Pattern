@@ -1,0 +1,5 @@
+Abstract Factory Pattern provides an interface for creating families of related objects
+or dependent objects without specifying their concrete classes.
+
+Factory Method -> Uses classes to create (through inheritance)
+Abstract Factory -> Uses objects to create (through composition)
