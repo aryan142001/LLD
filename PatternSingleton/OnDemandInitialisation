@@ -1,0 +1,27 @@
+Initialization-on-demand Holder Idiom:
+
+Pros:
+
+    Lazy initialization.
+    Thread-safe without the need for explicit synchronization.
+    Efficient, as the instance is created only when getInstance is called.
+
+Cons:
+
+    Not as widely known as other approaches.
+
+java
+
+    public class SingletonHolder {
+        private SingletonHolder() {
+            // private constructor to prevent instantiation
+        }
+
+        private static class SingletonHolderHelper {
+            private static final SingletonHolder instance = new SingletonHolder();
+        }
+
+        public static SingletonHolder getInstance() {
+            return SingletonHolderHelper.instance;
+        }
+    }

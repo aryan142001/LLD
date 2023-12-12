@@ -1,0 +1,30 @@
+Lazy Initialization (Double-Checked Locking):
+Pros:
+
+    Supports lazy loading, i.e., the instance is created only when needed.
+    Thread-safe with double-checked locking to improve performance.
+
+Cons:
+
+    Prior to Java 5, the double-checked locking was broken due to the Java memory model. With Java 5 and later, you can use the volatile keyword to fix this issue.
+
+java
+
+public class SingletonLazy {
+    private static volatile SingletonLazy instance;
+
+    private SingletonLazy() {
+        // private constructor to prevent instantiation
+    }
+
+    public static SingletonLazy getInstance() {
+        if (instance == null) {
+            synchronized (SingletonLazy.class) {
+                if (instance == null) {
+                    instance = new SingletonLazy();
+                }
+            }
+        }
+        return instance;
+    }
+}

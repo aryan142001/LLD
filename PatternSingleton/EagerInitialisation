@@ -1,0 +1,23 @@
+    Eager Initialization:
+
+    Pros:
+        Simple and straightforward.
+        Thread-safe as the instance is created at the time of class loading.
+
+    Cons:
+        The instance is created even if it is not used, which may lead to unnecessary resource consumption.
+        Does not support lazy loading.
+
+    java
+
+public class SingletonEager {
+    private static final SingletonEager instance = new SingletonEager();
+
+    private SingletonEager() {
+        // private constructor to prevent instantiation
+    }
+
+    public static SingletonEager getInstance() {
+        return instance;
+    }
+}

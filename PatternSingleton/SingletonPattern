@@ -1,0 +1,25 @@
+On a high level, it is to create an object one and only one time and provides a global point of access
+
+How we can do this? :- MyClass.getInstance()
+
+public MyClass{
+
+ static MyClass instance;
+ //constructor
+ private MyClass(){
+ }
+
+ public static MyClass getInstance(){
+  return new MyClass();
+ }
+}
+
+Choose the implementation that best fits your requirements and consider factors like
+performance, resource usage, and thread safety when making your decision. Additionally,
+in modern Java development, you may also consider using the enum approach for singleton patterns,
+which provides automatic thread safety and serialization/deserialization support.
+
+In Java, a singleton is a design pattern that restricts the instantiation of a class to one single
+instance and provides a global point of access to that instance. There are several ways to implement
+a singleton pattern in Java, each with its own pros and cons. Here are three common ways:
+

@@ -1,0 +1,39 @@
+public enum SingletonEnum {
+    INSTANCE; // The single instance, created once
+
+    // Additional fields and methods can be added here
+
+    public void doSomething() {
+        // Your singleton logic here
+        System.out.println("SingletonEnum is doing something");
+    }
+}
+
+Usage:
+
+java
+
+public class SingletonEnumExample {
+    public static void main(String[] args) {
+        // Access the singleton instance
+        SingletonEnum singleton = SingletonEnum.INSTANCE;
+
+        // Use the singleton
+        singleton.doSomething();
+
+        // Additional calls will still refer to the same instance
+        SingletonEnum anotherSingleton = SingletonEnum.INSTANCE;
+        anotherSingleton.doSomething();
+    }
+}
+
+Pros:
+
+    Simple and concise.
+    Implicitly serializable.
+    Thread-safe by design.
+
+Cons:
+
+    Not a traditional class, so it may not fit all use cases.
+    Eagerly initialised at the time of class loading
