@@ -1,0 +1,6 @@
+This pattern attaches additional responsibilities to an object dynamically.
+Decorators provide a flexible alternative to subclassing for extending functionality
+
+Decorators should have the same type as the objects they are trying to decorate (Need to be interchangeable with beverage For eg)
+
+Subclassing for correct type and composing for behaviour

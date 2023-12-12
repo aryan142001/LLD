@@ -1,0 +1,3 @@
+When behaviour is inherited via subclassing all the subclasses inherit the same behaviour and that too at compile time.
+If one can extend an object's behaviour through composition , then I can do this dynamically at runtime.
+
