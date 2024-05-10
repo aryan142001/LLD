@@ -1,0 +1,5 @@
+It provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher level
+interface that makes the subsystem easier to use.
+
+Purpose of Facade is simplifying
+Purpose of Adapter is to converting interface of one class to another

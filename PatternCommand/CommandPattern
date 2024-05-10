@@ -1,0 +1,39 @@
+Command pattern allows you to decouple the requester of an action from
+the object that actually performs the action
+
+Loading the invoker:-
+
+1) The client creates a command object
+
+2) The client does a setCommand() to store the command object in the invoker
+
+3) Later.. the client asks the invoker to execute the command . Note: as you'll
+see later in the chapter, once the command is loaded into the invoker, it may be
+used and discarded, or it may remain and be used many times
+
+It has 3 classes on a high-level:- Client, Invoker, Receiver
+---------------------------------------------------------------
+public interface Command {
+ public void execute();
+}
+
+public class LightOnCommand implements Command {
+ Light light;
+
+ public void execute() {
+ light.on();
+ }
+}
+----------------------------------------------------------------
+public class SimpleRemoteControl {
+ Command slot;
+
+ public void setCommand(){
+  slot = command;
+ }
+
+ public void buttonWasPressed() {
+   slot.execute();
+ }
+
+}

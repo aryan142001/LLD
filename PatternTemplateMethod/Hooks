@@ -1,0 +1,3 @@
+Hook :-
+With a hook I can override the method or not. Its my choice. If I dont , the abstract class provides a default
+implementation

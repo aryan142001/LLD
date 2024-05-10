@@ -1,0 +1,4 @@
+A remote proxy acts as a local representative to a remote object.
+
+Remote Object :-
+An object that lives in the heap of a different java virtual machine

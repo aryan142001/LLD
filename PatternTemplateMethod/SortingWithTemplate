@@ -1,0 +1,82 @@
+Designers of sort wanted it to be useful across all arrays, so they had to make sort a static method that
+could be used from anywhere, so they had to make sort() a static method that could be used from anywhere.
+Because, sort() is not defined in a superclass, the sort method needs to know that you have implemented the
+compareTo() method.
+
+To handle this, the designers made use of Comparable Interface.
+
+abstract class Duck implements Comparable<Duck> {
+    String name;
+    int weight;
+
+    public Duck(String name, int weight) {
+        this.name = name;
+        this.weight = weight;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    @Override
+    public int compareTo(Duck other) {
+        return Integer.compare(this.weight, other.weight);
+    }
+
+    @Override
+    public String toString() {
+        return name + " - " + weight;
+    }
+}
+
+class DuckSorter {
+    public static void sortDucks(Duck[] ducks) {
+        Arrays.sort(ducks);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Duck[] ducks = {
+            new RubberDuck("RubberDuck", 10),
+            new MallardDuck("MallardDuck", 20),
+            new RedheadDuck("RedheadDuck", 15)
+        };
+
+        System.out.println("Before sorting:");
+        display(ducks);
+
+        DuckSorter.sortDucks(ducks);
+
+        System.out.println("\nAfter sorting by weight:");
+        display(ducks);
+    }
+
+    public static void display(Duck[] ducks) {
+        for (Duck duck : ducks) {
+            System.out.println(duck);
+        }
+    }
+}
+
+class RubberDuck extends Duck {
+    public RubberDuck(String name, int weight) {
+        super(name, weight);
+    }
+}
+
+class MallardDuck extends Duck {
+    public MallardDuck(String name, int weight) {
+        super(name, weight);
+    }
+}
+
+class RedheadDuck extends Duck {
+    public RedheadDuck(String name, int weight) {
+        super(name, weight);
+    }
+}

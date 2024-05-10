@@ -1,0 +1,7 @@
+The Adapter Pattern converts the interface of a class into another interface the clients expect.
+Adapter lets classes work together that could not otherwise because of incompatible interfaces.
+
+Object Adapter -> Uses composition
+Class Adapter -> Uses inheritance
+
+Example : Think of adapter, power socket and laptop

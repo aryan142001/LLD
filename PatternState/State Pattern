@@ -1,0 +1,12 @@
+It allows an object to alter its behaviour when its internal state changes.
+(Think of gumball inserting quarter have different imp. acc. to state)
+The object will appear to change its class.
+
+Kind of similar with strategy pattern but difference is in intent.
+
+Think of Strategy pattern as a flexible alternative to subclassing:-
+    With Strategy you can change the behaviour by composing with different object
+
+Think of State pattern as an alternative to putting lots conditions in your context
+    By encapsulating the behaviours within state objects, you can simply change the
+    state object in context to change its behavior
